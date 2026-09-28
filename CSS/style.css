@@ -185,210 +185,557 @@ nav a {
     object-fit: cover; /* đảm bảo ảnh không bị méo */
     z-index: 23; /* Đảm bảo lớp phủ nằm trên ảnh nền nhưng dưới nội dung */
 }
+/* =========================
+   GIỚI THIỆU
+========================= */
+
+/* =========================
+   GIỚI THIỆU
+========================= */
+
 .Gioithieu {
     width: 100%;
-    min-height: 500px;
+    min-height: 600px;
+
+    background-color: #F5F1E8;
+
     position: relative;
+
     display: flex;
     align-items: center;
-    padding: 80px 10%;
-    padding-left: 15%;
-    gap: 60px;
+    justify-content: center;
+
+    padding: 70px 5%;
+
     overflow: hidden;
 }
+
+
+/* =========================
+   CARD NỔI
+========================= */
+
+.Gioithieu-card {
+
+    width: 96%;
+    max-width: 1400px;
+
+    background-color: #F1EBDD;
+
+    border: 1px solid #DED4C4;
+
+    border-radius: 25px;
+
+    padding: 50px 60px;
+
+    box-shadow:
+        0 10px 30px rgba(80, 60, 40, 0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 65px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+/* =========================
+   ẢNH GIỚI THIỆU
+========================= */
+
 .Gioithieu-anh {
     width: 30%;
+
     display: flex;
+
     justify-content: center;
-     z-index: 1;
+
+    flex-shrink: 0;
 }
+
+
 .Gioithieu-anh img {
-     width: 280px;
-    height: 360px;
+
+    width: 250px;
+
+    height: 320px;
 
     object-fit: cover;
 
-    border-radius: 2px;
+    border-radius: 12px;
 
-    box-shadow: 10px 10px 0 #9E2F2F;
+    box-shadow:
+        10px 10px 0 #9E2F2F;
 }
+
+/* =========================
+   NỘI DUNG
+========================= */
+
 .Gioithieu-noidung {
-    width: 40%;
-     z-index: 1;
+    flex: 1;
+
+    min-width: 0;
 }
-.Gioithieu-noidung .tieude {
-    font-size: 14px;
-    color: #9E2F2F;
 
-    letter-spacing: 3px;
 
-    font-weight: bold;
-
-    margin-bottom: 10px;
-}
 .Gioithieu-noidung h2 {
-       font-size: 38px;
+    font-size: 38px;
 
     color: #171717;
 
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
 }
-.Gioithieu-noidung .gachdo {
-    margin: 15px 0 20px 0;
-}
-.Gioithieu-noidung p {
-     color: #555;
 
-    font-size: 16px;
+
+.Gioithieu-noidung p {
+    color: #555;
+
+    font-size: 15px;
 
     line-height: 1.8;
 
     text-align: justify;
+
+    margin-bottom: 12px;
 }
-.Gioithieu-thongtin .btn {
-     margin-top: 25px;
+
+/* =========================
+   NÚT XEM THÊM
+========================= */
+
+.Gioithieu-noidung .btn {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 18px;
 
     background-color: #171717;
 
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
     transition: 0.3s;
 }
-.Gioithieu-thongtin .btn:hover {
+
+
+.Gioithieu-noidung .btn:hover {
+
     background-color: #9E2F2F;
 }
+
+
+/* =========================
+   THÔNG TIN
+========================= */
+
 .Gioithieu-thongtin {
-    width: 25%;
 
-    border-left: 2px solid #9E2F2F;
+    width: 100%;
 
-    padding-left: 30px;
-    position: relative;/* Đặt vị trí tương đối để có thể đặt nội dung bên trong */
-    z-index: 1; /* Đảm bảo nội dung nằm trên ảnh nền */
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 5px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #D8CFBF;
 }
+
+
 .Gioithieu-thongtin p {
-    color: #444;
 
-    font-size: 16px;
+    flex: 1;
 
-    margin-bottom: 25px;
+    min-height: 65px;
+
+    margin: 0;
+
+    padding: 15px;
+
+    background-color: #EAF3FA;
+
+    border: 1px solid #D4E3EE;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    color: #555;
+
+    font-size: 13px;
 
     line-height: 1.5;
-}
-.Gioithieu-Khung {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
 }
 /* =========================
    MẠNG XÃ HỘI
 ========================= */
 
 .Mangxahoi {
-    width: 100%;
-    height: 450px;
-    min-height: 0;
 
-    background-image: url("../images/Khung-XH.png");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 100%;
+
+    min-height: 410px;
 
     position: relative;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
 
-    padding: 60px 15%;
+    padding: 50px 10%;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    /* Nền đen hơi mờ */
+
+    background-color: #171918;
 }
-
-
-/* TIÊU ĐỀ */
+/* =========================
+   TIÊU ĐỀ
+========================= */
 
 .Mangxahoi-tieude {
+
     text-align: center;
+
     position: relative;
+
     z-index: 1;
+
+    margin-bottom: 35px;
 }
 
+
 .Mangxahoi-tieude p {
+
     font-size: 14px;
+
     color: #D9A441;
+
     letter-spacing: 3px;
+
     font-weight: bold;
+
     margin-bottom: 10px;
 }
 
+
 .Mangxahoi-tieude h2 {
+
     font-size: 38px;
-    color: white;
+
+    color: #F5F1E8;
+
     margin: 0;
+
+    font-weight: bold;
 }
+
 
 .Mangxahoi-tieude .gachdo {
-    margin: 15px auto 35px auto;
+
+    margin: 15px auto 0 auto;
 }
 
 
-/* DANH SÁCH */
+/* =========================
+   DANH SÁCH
+========================= */
 
 .Mangxahoi-danhsach {
+
+    width: 100%;
+
     display: flex;
+
     justify-content: center;
-    align-items: center;
+
+    align-items: stretch;
+
     gap: 25px;
 
     position: relative;
+
     z-index: 1;
 }
 
 
-/* TỪNG Ô MẠNG XÃ HỘI */
+/* =========================
+   CARD
+========================= */
 
 .Mangxahoi-item {
-    width: 260px;
-    min-height: 90px;
+    width: 300px;
+    min-height: 100px;
 
     display: flex;
     align-items: center;
-
     gap: 18px;
-    padding: 20px;
 
-    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 25px;
 
-    border: 1px solid #B79A62;
+    background-color: rgba(30, 32, 31, 0.88);
+
+    border: 1px solid rgba(183, 154, 98, 0.55);
+
+    /* Bo góc giống card Giới thiệu */
+    border-radius: 25px;
 
     text-decoration: none;
-    color: #171717;
+    color: white;
 
     transition: 0.3s;
 }
 
+/* HOVER */
+
 .Mangxahoi-item:hover {
     transform: translateY(-5px);
+
+    background-color: rgba(40, 42, 41, 0.95);
+
+    border-color: #D9A441;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.Mangxahoi-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    background-color: #9E2F2F;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TÊN
+========================= */
+
+.Mangxahoi-item h3 {
+
+    font-size: 18px;
+
+    color: #F5F1E8;
+
+    margin: 0 0 6px 0;
+}
+
+
+/* =========================
+   THÔNG TIN
+========================= */
+
+.Mangxahoi-item p {
+
+    font-size: 14px;
+
+    color: #BDBDBD;
+
+    margin: 0;
+
+    line-height: 1.4;
+}
+/* =========================
+   KỸ NĂNG
+========================= */
+
+.Kynang {
+    width: 100%;
+
+    min-height: 330px;
+
+    background-color: #F5F1E8;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    padding: 45px 12% 35px 12%;
+
+    overflow: hidden;
+
+    margin: 0;
+}
+
+
+/* =========================
+   TIÊU ĐỀ
+========================= */
+
+.Kynang-tieude {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 28px;
+}
+
+
+.Kynang-tieude p {
+    font-size: 14px;
+
+    color: #9E2F2F;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+
+.Kynang-tieude h2 {
+    font-size: 32px;
+
+    color: #171717;
+
+    margin: 0;
+}
+
+
+.Kynang-tieude .gachdo {
+    margin: 12px 0 10px 0;
+}
+
+
+.Kynang-tieude span {
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   DANH SÁCH KỸ NĂNG
+========================= */
+
+.Kynang-danhsach {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 20px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   CARD KỸ NĂNG
+========================= */
+
+.Kynang-item {
+    flex: 1;
+
+    min-width: 0;
+
+    min-height: 90px;
+
+    background-color: rgba(255, 255, 255, 0.75);
+
+    padding: 18px;
+
+    border: 1px solid #D8C9A8;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+.Kynang-item:hover {
+    transform: translateY(-5px);
+
     border-color: #9E2F2F;
+
+    box-shadow:
+        0 8px 18px rgba(80, 60, 40, 0.08);
+}
+
+
+/* =========================
+   DÒNG ĐẦU
+========================= */
+
+.Kynang-item-dau {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 13px;
 }
 
 
 /* ICON */
 
-.Mangxahoi-icon {
-    width: 50px;
-    height: 50px;
+.Kynang-icon {
+    width: 32px;
+    height: 32px;
 
-    background-color: #9E2F2F;
+    background-color: #D9A441;
+
     color: white;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    font-size: 22px;
+    font-size: 12px;
+
     font-weight: bold;
 
     flex-shrink: 0;
@@ -397,19 +744,736 @@ nav a {
 
 /* TÊN */
 
-.Mangxahoi-item h3 {
-    font-size: 18px;
+.Kynang-item h3 {
+    font-size: 15px;
+
+    color: #171717;
+
+    margin: 0;
+
+    flex: 1;
+}
+
+
+/* PHẦN TRĂM */
+
+.phantram {
+    font-size: 12px;
+
+    color: #666;
+}
+
+
+/* =========================
+   THANH TIẾN ĐỘ
+========================= */
+
+.thanh {
+    width: 100%;
+
+    height: 6px;
+
+    background-color: #DDD6C8;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+
+.thanh-do {
+    height: 100%;
+
+    background-color: #9E2F2F;
+
+    border-radius: 5px;
+}
+
+
+.thanh-do.html {
+    width: 80%;
+}
+
+
+.thanh-do.css {
+    width: 70%;
+}
+
+
+.thanh-do.javascript {
+    width: 50%;
+}
+
+
+.thanh-do.tienganh {
+    width: 60%;
+}
+
+
+/* =========================
+   KỸ NĂNG PHỤ
+========================= */
+
+.Kynang-phu {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.Kynang-phu span {
+    padding: 7px 14px;
+
+    border: 1px solid #B79A62;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    color: #555;
+
+    font-size: 12px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+
+.Kynang-phu span:hover {
+    background-color: #9E2F2F;
+
+    color: white;
+
+    border-color: #9E2F2F;
+}
+/* =========================
+   TIÊU ĐỀ
+========================= */
+/* =========================
+   SỞ THÍCH
+========================= */
+
+.Sothich {
+    width: 100%;
+
+    min-height: 420px;
+
+    background-color: #F5F1E8;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    padding: 70px 11% 60px 11%;
+
+    overflow: hidden;
+
+    margin: 0;
+}
+.Sothich-tieude {
+    width: 100%;
+
+    position: relative;
+
+    z-index: 1;
+
+    margin-bottom: 30px;
+}
+
+
+.Sothich-tieude p {
+    font-size: 14px;
+
+    color: #9E2F2F;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin: 0 0 7px 0;
+}
+
+
+.Sothich-tieude h2 {
+    font-size: 32px;
+
+    color: #171717;
+
+    margin: 0;
+}
+
+/* =========================
+   DANH SÁCH
+========================= */
+
+.Sothich-danhsach {
+    width: 100%;
+
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 25px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.Sothich-item {
+    width: 25%;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    border: 1px solid #D8C9A8;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+.Sothich-item:hover {
+    transform: translateY(-5px);
+
+    border-color: #9E2F2F;
+}
+
+
+.Sothich-item > img {
+    width: 100%;
+
+    height: 125px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.Sothich-noidung {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 14px;
+}
+
+
+.Sothich-icon {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background-color: #171717;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+.Sothich-item h3 {
+    font-size: 17px;
+
     color: #171717;
 
     margin: 0 0 5px 0;
 }
 
 
-/* THÔNG TIN */
+.Sothich-item p {
+    font-size: 12px;
 
-.Mangxahoi-item p {
-    font-size: 14px;
+    line-height: 1.5;
+
     color: #666;
 
     margin: 0;
+}
+/* =========================
+   LIÊN HỆ
+========================= */
+
+.Lienhe {
+    width: 100%;
+    background-color: #F5F1E8;
+    position: relative;
+}
+
+/* =========================
+   LIÊN HỆ
+========================= */
+
+.Lienhe {
+    width: 100%;
+    background-color: #F5F1E8;
+    position: relative;
+}
+
+/* =========================
+   KHUNG LIÊN HỆ
+========================= */
+
+/* =========================
+   NỘI DUNG LIÊN HỆ
+========================= */
+
+.Lienhe-noidung {
+
+    width: 100%;
+
+    min-height: 330px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 50px 12%;
+}
+
+/* =========================
+   THÔNG TIN
+========================= */
+
+.Lienhe-thongtin {
+    width: 40%;
+}
+
+.Lienhe-tieude {
+    font-size: 18px;
+
+    color: #171717;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+.Lienhe-mota {
+    font-size: 13px;
+
+    color: #555;
+
+    margin-bottom: 18px;
+}
+
+.Lienhe-thongtin > p:not(.Lienhe-tieude):not(.Lienhe-mota) {
+    font-size: 14px;
+
+    color: #444;
+
+    margin-bottom: 12px;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.Lienhe-form {
+    width: 48%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+/* 2 Ô TRÊN CÙNG */
+
+.Lienhe-hang {
+    display: flex;
+
+    gap: 10px;
+}
+
+.Lienhe-hang input {
+    width: 50%;
+}
+
+/* INPUT + TEXTAREA */
+
+.Lienhe-form input,
+.Lienhe-form textarea {
+    width: 100%;
+
+    padding: 9px 12px;
+
+    border: 1px solid #D8C9A8;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+/* TEXTAREA */
+
+.Lienhe-form textarea {
+    height: 65px;
+
+    resize: none;
+}
+
+/* KHI CLICK VÀO */
+
+.Lienhe-form input:focus,
+.Lienhe-form textarea:focus {
+    border-color: #9E2F2F;
+}
+
+/* NÚT GỬI */
+
+.Lienhe-form button {
+    width: 120px;
+
+    padding: 9px 12px;
+
+    background-color: #9E2F2F;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.Lienhe-form button:hover {
+    background-color: #171717;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.Footer {
+    width: 100%;
+
+    height: 70px;
+
+    background-color: #171717;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 4%;
+
+    position: relative;
+}
+
+/* LOGO */
+
+.Footer-logo {
+    font-size: 16px;
+
+    font-style: italic;
+}
+
+/* =========================
+   MẠNG XÃ HỘI FOOTER
+========================= */
+
+.Footer-social {
+    display: flex;
+
+    gap: 15px;
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.Footer-social a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.Footer-social a:hover {
+    color: #D9A441;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.Footer > p {
+    font-size: 11px;
+
+    color: #aaa;
+
+    margin-left: auto;
+
+    margin-right: 35px;
+}
+
+/* =========================
+   NÚT LÊN ĐẦU TRANG
+========================= */
+
+.Footer-top {
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.Footer-top:hover {
+    border-color: #D9A441;
+
+    color: #D9A441;
+}
+/* =========================
+   THỔ CẨM GIỚI THIỆU
+========================= */
+
+.Gioithieu {
+    position: relative;
+    overflow: hidden;
+}
+
+.Gioithieu-thocam {
+    position: absolute;
+
+    left: -40px;
+    bottom: -10px;
+
+    width: 620px;
+    height: auto;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+/* =========================
+   HOA GIỚI THIỆU
+========================= */
+
+.Gioithieu-hoa {
+    position: absolute;
+
+    left: -5px;
+    top: 130px;
+
+    width: 220px;
+    height: auto;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+.Gioithieu-hoa-phai {
+     position: absolute;
+
+    right: 0;
+    bottom: -5px;
+
+    width: 190px;
+    height: auto;
+
+    z-index: 4;
+
+    pointer-events: none;
+}
+.Gioithieu-thocam-phai {
+     position: absolute;
+
+    right: -10px;
+    bottom: -35px;
+
+    width: 320px;
+    height: auto;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+.Mangxahoi-nui {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+    opacity: 0.45;
+
+    pointer-events: none;
+}
+.Mangxahoi-thocam {
+    position: absolute;
+    left: 0;
+    bottom: -70px;
+
+    width: 100%;
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.Mangxahoi-hoa-trai {
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    width: 250px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+.Mangxahoi-hoa-phai {
+    position: absolute;
+    right: 5px;
+    top: -40px;
+    width: 380px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+.Kynang-nui {
+    position: absolute;
+    top: -80px;
+    right: 0;
+
+    width: 55%;
+    height: auto;
+
+    z-index: 0;
+    pointer-events: none;
+}
+.Kynang-hoa-phai {
+    position: absolute;
+    top: -20px;
+    right: 0;
+
+    width: 430px;
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.Kynang-canhtrai {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    width: 430px;
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.Sothich-hoa-trai {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    width: 300px;
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.Sothich-trangtri-phai {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+
+    width: 500px;
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.Lienhe-trangtri-trai {
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+
+    width: 330px;
+    height: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.Lienhe-trangtri-phai {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    
+    width: 420px;
+    height: auto;
+    
+    z-index: 1;
+    pointer-events: none;
 }
