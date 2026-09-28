@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { 
+    margin: 0;
+    padding: 0;
+}
+
+.Phan1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;/* Khoảng cách giữa ảnh và văn bản */
+    margin-right: 80px;
+    
+    position: relative; /* Đặt vị trí tương đối để có thể đặt nội dung bên trong */
+    left: -100px; /* Dịch chuyển sang trái 190px */
+}
+
+.Phan1 img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+.Phan1 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color:  white;
+    margin-left: 0;
+}
+.Phan1 p {
+    font-size: 9px;
+    color: #666;
+    margin: 4px 0 0 0;
+}
+header {
+    position:absolute; /* đè lên ảnh*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    background-color: rgba(0, 0, 0, 0.80);/* màu mờ đen */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;/* căn giữa nội dung theo chiều ngang */
+    box-sizing: border-box;
+    z-index: 10;
+    transform: none; /* Không dịch chuyển header */
+    
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+      
+    position: relative; /* Đặt vị trí tương đối để có thể đặt nội dung bên trong */
+    left: -100px; /* Dịch chuyển sang trái 190px */
+    
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.Hero {
+    position: relative;/* Đặt vị trí tương đối để có thể đặt nội dung bên trong */
+    width: 100%;
+    height: 650px;/* Chiều cao của Hero */
+    background-color: #171717;
+    overflow:hidden;/* Ẩn phần nội dung vượt ra ngoài Hero */
+     
+}
+.Hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 30%,
+        rgba(0, 0, 0, 0.4) 70%,
+        transparent 100%
+    );/* Tạo hiệu ứng gradient từ màu đen sang trong suốt */
+    z-index: 2; /* Đặt z-index thấp để lớp phủ nằm dưới nội dung */
+    pointer-events: none; /* Cho phép người dùng tương tác với các phần tử bên dưới lớp phủ */
+}
+.Hero-bg {
+    position:absolute; /* Đặt vị trí tuyệt đối để ảnh nền nằm dưới nội dung */
+    top: 0;
+    right: 0; 
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover; /* Đảm bảo ảnh nền không bị méo */
+    object-position: center center ; /* Đặt vị trí ảnh nền ở giữa */
+    z-index: 0; /* Đặt z-index thấp để ảnh nền nằm dưới nội dung */
+}
+.Hero-content {
+    position: absolute;
+    top: 180px;
+    left: 160px;
+    color: white;
+    z-index: 22; /* Đảm bảo nội dung nằm trên ảnh nền */ 
+}
+.Hero-content p {
+    font-size: 18px;
+    margin: 8px 0 0 0;
+}
+.Hero-content h1 {
+    font-size: 48px;
+    margin: 10px 0 0 0;
+}
+.Hero-content h2 {
+    font-size: 30px;
+    margin: 10px 0 0 0;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #9E2F2F;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.gachdo {
+    width: 40px;
+    height: 2px;
+    background-color: #9E2F2F; /* màu đỏ thổ cẩm */
+    margin: 15px 0;
+    z-index: 1; /* Đảm bảo lớp phủ nằm trên ảnh nền nhưng dưới nội dung */
+}
+.thocam {
+    position:absolute;/* đè lên ảnh*/
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 650px;
+    object-fit: cover;/* đảm bảo ảnh không bị méo */
+    z-index: 21; /* Đảm bảo lớp phủ nằm trên ảnh nền nhưng dưới nội dung */
+   
+}
+.thocam1 {
+    position:absolute;/* đè lên ảnh*/
+    left: -10px;
+    bottom: -100px;
+
+    width: 450px;
+    height: 400px;
+    object-fit: contain;/* đảm bảo ảnh không bị méo */
+    z-index: 19; /* Đảm bảo lớp phủ nằm trên ảnh nền nhưng dưới nội dung */
+    filter: drop-shadow(10px -10px 12px rgba(0, 0, 0, 0.9)); /* Tạo hiệu ứng bóng đổ */
+}
+.bong-thocam{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 350px;
+    height: 300px;
+    background: linear-gradient(
+        to right,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.85) 20%,
+    rgba(0, 0, 0, 0.6) 45%,
+    rgba(0, 0, 0, 0.3) 70%, transparent 100%); /* Tạo hiệu ứng gradient từ màu đen sang trong suốt */
+    z-index: 20;
+   pointer-events: none; /* Cho phép người dùng tương tác với các phần tử bên dưới lớp phủ */
+}
+.Hoa1 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    width: 190px;
+    height: auto;
+    object-fit: cover; /* đảm bảo ảnh không bị méo */
+    z-index: 23; /* Đảm bảo lớp phủ nằm trên ảnh nền nhưng dưới nội dung */
+}
+.Gioithieu {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    padding-left: 15%;
+    gap: 60px;
+    overflow: hidden;
+}
+.Gioithieu-anh {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+     z-index: 1;
+}
+.Gioithieu-anh img {
+     width: 280px;
+    height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+
+    box-shadow: 10px 10px 0 #9E2F2F;
+}
+.Gioithieu-noidung {
+    width: 40%;
+     z-index: 1;
+}
+.Gioithieu-noidung .tieude {
+    font-size: 14px;
+    color: #9E2F2F;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+.Gioithieu-noidung h2 {
+       font-size: 38px;
+
+    color: #171717;
+
+    margin-bottom: 5px;
+}
+.Gioithieu-noidung .gachdo {
+    margin: 15px 0 20px 0;
+}
+.Gioithieu-noidung p {
+     color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+}
+.Gioithieu-thongtin .btn {
+     margin-top: 25px;
+
+    background-color: #171717;
+
+    transition: 0.3s;
+}
+.Gioithieu-thongtin .btn:hover {
+    background-color: #9E2F2F;
+}
+.Gioithieu-thongtin {
+    width: 25%;
+
+    border-left: 2px solid #9E2F2F;
+
+    padding-left: 30px;
+    position: relative;/* Đặt vị trí tương đối để có thể đặt nội dung bên trong */
+    z-index: 1; /* Đảm bảo nội dung nằm trên ảnh nền */
+}
+.Gioithieu-thongtin p {
+    color: #444;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+
+    line-height: 1.5;
+}
+.Gioithieu-Khung {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+/* =========================
+   MẠNG XÃ HỘI
+========================= */
+
+.Mangxahoi {
+    width: 100%;
+    height: 450px;
+    min-height: 0;
+
+    background-image: url("../images/Khung-XH.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 15%;
+}
+
+
+/* TIÊU ĐỀ */
+
+.Mangxahoi-tieude {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.Mangxahoi-tieude p {
+    font-size: 14px;
+    color: #D9A441;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Mangxahoi-tieude h2 {
+    font-size: 38px;
+    color: white;
+    margin: 0;
+}
+
+.Mangxahoi-tieude .gachdo {
+    margin: 15px auto 35px auto;
+}
+
+
+/* DANH SÁCH */
+
+.Mangxahoi-danhsach {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* TỪNG Ô MẠNG XÃ HỘI */
+
+.Mangxahoi-item {
+    width: 260px;
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+    padding: 20px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid #B79A62;
+
+    text-decoration: none;
+    color: #171717;
+
+    transition: 0.3s;
+}
+
+.Mangxahoi-item:hover {
+    transform: translateY(-5px);
+    border-color: #9E2F2F;
+}
+
+
+/* ICON */
+
+.Mangxahoi-icon {
+    width: 50px;
+    height: 50px;
+
+    background-color: #9E2F2F;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* TÊN */
+
+.Mangxahoi-item h3 {
+    font-size: 18px;
+    color: #171717;
+
+    margin: 0 0 5px 0;
+}
+
+
+/* THÔNG TIN */
+
+.Mangxahoi-item p {
+    font-size: 14px;
+    color: #666;
+
+    margin: 0;
+}
