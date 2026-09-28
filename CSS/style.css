@@ -1477,3 +1477,12 @@ nav a {
     z-index: 1;
     pointer-events: none;
 }
+/* =========================
+   RESPONSIVE CHO ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 768px) {
+
+   
+    
+}
