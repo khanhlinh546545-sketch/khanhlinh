@@ -1477,12 +1477,514 @@ nav a {
     z-index: 1;
     pointer-events: none;
 }
-/* =========================
-   RESPONSIVE CHO ĐIỆN THOẠI
-========================= */
+/* =====================================================
+   RESPONSIVE - ĐIỆN THOẠI
+   ===================================================== */
 
 @media (max-width: 768px) {
 
-   
-    
+    /* =========================
+       CHỐNG TRÀN NGANG
+    ========================= */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+    header {
+        height: auto;
+        min-height: 65px;
+        padding: 10px 15px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .Phan1 {
+        left: 0;
+        margin-right: 0;
+        gap: 7px;
+    }
+
+    .Phan1 img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .Phan1 h2 {
+        font-size: 17px;
+    }
+
+    nav {
+        left: 0;
+        width: 100%;
+        gap: 18px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 4px 5px;
+        scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+    .Hero {
+        height: 600px;
+    }
+
+    .Hero-bg {
+        object-position: 60% center;
+    }
+
+    .Hero-content {
+        top: 170px;
+        left: 25px;
+        right: 25px;
+    }
+
+    .Hero-content p {
+        font-size: 14px;
+    }
+
+    .Hero-content h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .Hero-content h2 {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    .Hero-content .btn {
+        font-size: 13px;
+        padding: 9px 15px;
+    }
+
+    /* Thổ cẩm Hero */
+    .thocam {
+        width: 90px;
+        height: 600px;
+    }
+
+    .thocam1 {
+        width: 280px;
+        height: 250px;
+        left: -30px;
+        bottom: -60px;
+    }
+
+    .bong-thocam {
+        width: 250px;
+        height: 220px;
+    }
+
+    .Hoa1 {
+        width: 120px;
+        top: 65px;
+        left: 10px;
+    }
+
+
+    /* =========================
+       GIỚI THIỆU
+    ========================= */
+    .Gioithieu {
+        padding: 45px 15px;
+        min-height: auto;
+    }
+
+    .Gioithieu-card {
+        width: 100%;
+        padding: 30px 20px;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 18px;
+    }
+
+    .Gioithieu-anh {
+        width: 100%;
+    }
+
+    .Gioithieu-anh img {
+        width: 210px;
+        height: 270px;
+    }
+
+    .Gioithieu-noidung {
+        width: 100%;
+    }
+
+    .Gioithieu-noidung h2 {
+        font-size: 30px;
+    }
+
+    .Gioithieu-noidung p {
+        font-size: 14px;
+        text-align: left;
+        line-height: 1.7;
+    }
+
+    .Gioithieu-thongtin {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Gioithieu-thongtin p {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    /* Trang trí */
+    .Gioithieu-thocam {
+        width: 280px;
+        left: -80px;
+    }
+
+    .Gioithieu-hoa {
+        width: 120px;
+        top: 60px;
+        left: -20px;
+    }
+
+    .Gioithieu-hoa-phai {
+        width: 110px;
+    }
+
+    .Gioithieu-thocam-phai {
+        width: 190px;
+    }
+
+
+    /* =========================
+       MẠNG XÃ HỘI
+    ========================= */
+    .Mangxahoi {
+        padding: 45px 20px;
+        min-height: auto;
+    }
+
+    .Mangxahoi-tieude h2 {
+        font-size: 30px;
+    }
+
+    .Mangxahoi-danhsach {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .Mangxahoi-item {
+        width: 100%;
+        min-height: 80px;
+    }
+
+    .Mangxahoi-nui {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Mangxahoi-thocam {
+        width: 180%;
+        left: -40%;
+        bottom: -30px;
+    }
+
+    .Mangxahoi-hoa-trai {
+        width: 130px;
+    }
+
+    .Mangxahoi-hoa-phai {
+        width: 180px;
+    }
+
+
+    /* =========================
+       KỸ NĂNG
+    ========================= */
+    .Kynang {
+        padding: 45px 20px;
+        min-height: auto;
+    }
+
+    .Kynang-tieude h2 {
+        font-size: 27px;
+        line-height: 1.3;
+    }
+
+    .Kynang-danhsach {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .Kynang-item {
+        padding: 14px;
+    }
+
+    .Kynang-item-dau {
+        gap: 7px;
+    }
+
+    .Kynang-item h3 {
+        font-size: 13px;
+    }
+
+    .phantram {
+        font-size: 11px;
+    }
+
+    .Kynang-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 10px;
+    }
+
+    .Kynang-canhtrai {
+        width: 200px;
+    }
+
+    .Kynang-hoa-phai {
+        width: 200px;
+    }
+
+    .Kynang-nui {
+        width: 100%;
+        top: 0;
+    }
+
+
+    /* =========================
+       SỞ THÍCH
+    ========================= */
+    .Sothich {
+        padding: 45px 20px;
+        min-height: auto;
+    }
+
+    .Sothich-tieude h2 {
+        font-size: 27px;
+    }
+
+    .Sothich-danhsach {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .Sothich-item {
+        width: 100%;
+    }
+
+    .Sothich-item > img {
+        height: 110px;
+    }
+
+    .Sothich-noidung {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .Sothich-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .Sothich-item h3 {
+        font-size: 14px;
+    }
+
+    .Sothich-item p {
+        font-size: 11px;
+    }
+
+    .Sothich-hoa-trai {
+        width: 150px;
+    }
+
+    .Sothich-trangtri-phai {
+        width: 230px;
+    }
+
+
+    /* =========================
+       LIÊN HỆ
+    ========================= */
+    .Lienhe-noidung {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+        padding: 45px 20px;
+    }
+
+    .Lienhe-thongtin {
+        width: 100%;
+    }
+
+    .Lienhe-form {
+        width: 100%;
+    }
+
+    .Lienhe-hang {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .Lienhe-hang input {
+        width: 100%;
+    }
+
+    .Lienhe-trangtri-trai {
+        width: 170px;
+    }
+
+    .Lienhe-trangtri-phai {
+        width: 210px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+    .Footer {
+        height: auto;
+        min-height: 100px;
+        padding: 20px 15px;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .Footer-social {
+        position: static;
+        transform: none;
+    }
+
+    .Footer > p {
+        margin: 0;
+        font-size: 10px;
+    }
+}
+
+
+/* =====================================================
+   ĐIỆN THOẠI NHỎ
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .Hero {
+        height: 560px;
+    }
+
+    .Hero-content {
+        top: 165px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .Hero-content h1 {
+        font-size: 30px;
+    }
+
+    .Hero-content h2 {
+        font-size: 17px;
+    }
+
+    .Hero-content p {
+        font-size: 13px;
+    }
+
+    .thocam {
+        width: 70px;
+        height: 560px;
+    }
+
+    .Hoa1 {
+        width: 100px;
+    }
+
+    .Gioithieu-card {
+        padding: 25px 16px;
+    }
+
+    .Gioithieu-anh img {
+        width: 190px;
+        height: 245px;
+    }
+
+    .Kynang-danhsach,
+    .Sothich-danhsach {
+        grid-template-columns: 1fr;
+    }
+
+    .Kynang-item {
+        width: 100%;
+    }
+
+    .Sothich-item {
+        width: 100%;
+    }
+
+    .Sothich-item > img {
+        height: 140px;
+    }
+
+    .Mangxahoi-tieude h2,
+    .Kynang-tieude h2,
+    .Sothich-tieude h2 {
+        font-size: 25px;
+    }
+}
+.Hero-trangtri-phai {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 330px;
+    height: auto;
+
+    z-index: 10;
+    pointer-events: none;
+}
+.ThanhHoa {
+    position: absolute;
+    right: 6%;
+    bottom: 7%;
+    z-index: 24;
+    text-align: center;
+    color: white;
+}
+
+.ThanhHoa h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-style: italic;
+    margin: 0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.ThanhHoa p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    margin-top: 5px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
