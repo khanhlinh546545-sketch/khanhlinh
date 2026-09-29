@@ -1884,11 +1884,6 @@ nav a {
     }
 }
 
-
-/* =====================================================
-   ĐIỆN THOẠI NHỎ
-   ===================================================== */
-
 @media (max-width: 480px) {
 
     .Hero {
@@ -1953,7 +1948,15 @@ nav a {
     .Sothich-tieude h2 {
         font-size: 25px;
     }
+
+    /* THÊM ĐOẠN NÀY */
+    .Hero-trangtri-phai {
+        width: 145px;
+        right: -5px;
+        top: 0;
+    }
 }
+
 .Hero-trangtri-phai {
     position: absolute;
     top: 0;
